@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قيمنا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>الموقع الرسمي لشقق الدكتور نضال السكنية</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">من نحن ؟</a></li>
+                <li><a href="page2.html">الإدارة</a></li>
+                <li><a href="page3.html">المطبخ وإدارة الخدمات</a></li>
+                <li><a href="page4.html">القسم التقني</a></li>
+                <li><a href="page5.html">الخدمات الطبية</a></li>
+                <li><a href="page6.html">قسم الترفيه</a></li>
+                <li><a href="page7.html">قيمنا</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main style="background-image: url('images/img.jpeg');">
+        <div class="content">
+            <form id="rating-form">
+                <label for="name">ادخل اسمك:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="rating">قيم تجربتك:</label>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">⭐</label>
+
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">⭐</label>
+
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">⭐</label>
+
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">⭐</label>
+
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">⭐</label>
+                </div>
+
+                <button type="submit">إرسال</button>
+            </form>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
