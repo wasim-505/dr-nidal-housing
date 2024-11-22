@@ -6,7 +6,6 @@ body {
     direction: rtl;
     text-align: center;
     color: white;
-    overflow-x: hidden;
 }
 
 /* Header Styling */
@@ -19,13 +18,18 @@ header {
     padding: 15px 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1.2em;
 }
 
 header h1 {
     margin: 0;
     font-size: 1.5em;
+    padding: 0 10px;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
+/* Navigation */
 nav {
     margin-top: 10px;
 }
@@ -36,7 +40,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Wrap the items on small screens */
 }
 
 nav ul li {
@@ -66,7 +70,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .content {
@@ -85,6 +88,7 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    width: 100%;
 }
 
 form input[type="text"] {
@@ -93,7 +97,7 @@ form input[type="text"] {
     border: none;
     border-radius: 5px;
     width: 80%;
-    max-width: 300px;
+    max-width: 350px; /* Limit input width */
 }
 
 .stars {
@@ -137,53 +141,51 @@ form button {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 80%;
-    max-width: 300px;
 }
 
 form button:hover {
     background-color: #0056b3;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 600px) {
+/* Media Query for Mobile Optimization */
+@media screen and (max-width: 767px) {
+    /* Adjust header */
     header h1 {
-        font-size: 1.2em; /* Smaller header size on mobile */
+        font-size: 1.2em;
+        padding: 0 5px;
     }
 
     nav ul {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Main content adjustments */
+    main {
+        height: auto;
+        padding-bottom: 20px;
     }
 
     .content {
-        padding: 10px;
+        max-width: 90%; /* Adjust content width */
+        padding: 15px;
+    }
+
+    /* Form Styling for Mobile */
+    form input[type="text"] {
         width: 90%;
+        max-width: 300px;
+    }
+
+    .stars label {
+        font-size: 1.5em;
+    }
+
+    form button {
+        padding: 10px 15px;
         font-size: 1em;
-    }
-
-    form input[type="text"],
-    form button {
-        width: 100%;
-        max-width: none; /* Remove max-width on smaller screens */
-    }
-
-    .stars label {
-        font-size: 1.5em; /* Smaller star size on mobile */
-    }
-
-    form button {
-        font-size: 0.9em; /* Smaller button font size */
-    }
-}
-
-/* For iPhone X and higher (landscape and portrait) */
-@media screen and (max-width: 750px) {
-    header h1 {
-        font-size: 1.4em;
-    }
-
-    .stars label {
-        font-size: 1.8em;
     }
 }
