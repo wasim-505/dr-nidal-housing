@@ -18,18 +18,13 @@ header {
     padding: 15px 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    font-size: 1.2em;
 }
 
 header h1 {
     margin: 0;
     font-size: 1.5em;
-    padding: 0 10px;
-    white-space: nowrap; /* Prevents text from wrapping */
 }
 
-/* Navigation */
 nav {
     margin-top: 10px;
 }
@@ -39,8 +34,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap; /* Wrap the items on small screens */
+    gap: 20px;
 }
 
 nav ul li {
@@ -50,7 +44,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 0.01em;
+    font-size: 1em;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
@@ -62,7 +56,7 @@ nav ul li a:hover {
 
 /* Main Content Styling */
 main {
-    margin-top: 400px; /* Avoid overlap with header */
+    margin-top: 100px; /* Avoid overlap with header */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -88,7 +82,6 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    width: 100%;
 }
 
 form input[type="text"] {
@@ -97,7 +90,6 @@ form input[type="text"] {
     border: none;
     border-radius: 5px;
     width: 80%;
-    max-width: 350px; /* Limit input width */
 }
 
 .stars {
@@ -145,47 +137,4 @@ form button {
 
 form button:hover {
     background-color: #0056b3;
-}
-
-/* Media Query for Mobile Optimization */
-@media screen and (max-width: 767px) {
-    /* Adjust header */
-    header h1 {
-        font-size: 1.2em;
-        padding: 0 5px;
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    /* Main content adjustments */
-    main {
-        height: auto;
-        padding-bottom: 20px;
-    }
-
-    .content {
-        max-width: 90%; /* Adjust content width */
-        padding: 15px;
-    }
-
-    /* Form Styling for Mobile */
-    form input[type="text"] {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    .stars label {
-        font-size: 1.5em;
-    }
-
-    form button {
-        padding: 10px 15px;
-        font-size: 1em;
-    }
 }
