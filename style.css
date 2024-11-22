@@ -50,7 +50,7 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 0.1em;
+    font-size: 0.01em;
     padding: 5px 10px;
     transition: background-color 0.3s;
 }
@@ -62,7 +62,7 @@ nav ul li a:hover {
 
 /* Main Content Styling */
 main {
-    margin-top: 100px; /* Avoid overlap with header */
+    margin-top: 400px; /* Avoid overlap with header */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
